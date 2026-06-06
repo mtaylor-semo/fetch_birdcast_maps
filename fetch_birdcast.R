@@ -39,7 +39,7 @@ spring_sunsets <- getSunlightTimes(spring_dates,latitude,longitude,tz = "GMT")$s
 spring_sunsets_plus_two <- spring_sunsets + hours(2)
 
 # Round to nearest 10 minutes
-spring_sunsets_plus_two <- round_date(spring_sunsets_plus_two, "10 minutes")
+spring_sunsets_plus_two <- ceiling_date(spring_sunsets_plus_two, "10 minutes")
 
 sunset_length <- length(spring_sunsets_plus_two)
 sunset_length <- length(fall_sunsets_plus_two)
